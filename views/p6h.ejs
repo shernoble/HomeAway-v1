@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <title>Amenities Provided</title>
+        <link rel="stylesheet" href="/all.css">
+        <link rel="stylesheet" href="/p6h.css">
+        <link rel="icon" href="/favicon.ico">
+    </head>
+    <body>
+        <div class="navbar header">
+            <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+         </div>
+        <form action="/p6h" method="post">
+            <div class="bg-img">
+                        <h1 style="font-size: 45px;margin-top: 0px;padding:12px">What amenities can you provide to guests</h1>
+                            <div class="a1">
+                                
+                                    <div class="dv" id="cb1">   
+                                        <img src="/images/kitchen.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o1" value="Kitchen">
+                                        <label>Kitchen</label>
+                                    </div>
+                                
+                                <div class="dv" id="cb2">
+                                    
+                                        <img src="/images/tv.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o2" value="Tv">
+                                        <label>Tv</label>
+                                    </div>
+                                
+                              
+                                    <div class="dv" id="cb3">
+                                        <img src="/images/wifi.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o3" value="Wifi">
+                                        <label>Wifi</label>
+                                    </div>
+                                
+                            </div>
+                            <div class="a2">
+                                    <div class="dv" id="cb4">
+                                        <img src="/images/ac.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o4" value="AC">
+                                        <label>AC</label>
+                                    </div>
+                               
+                               
+                                    <div class="dv" id="cb5">
+                                        <img src="/images/wm.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o5" value="Washing machine">
+                                        <label>Washing machine</label>
+                                    </div>
+                               
+                                    <div class="dv" id="cb6">
+                                        <img src="/images/parking.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o6" value="Parking Area">
+                                        <label>Parking Area</label>
+                                    </div>
+                                
+                            </div>
+                            <div class="a3">
+                                    <div class="dv" id="cb7">
+                                        <img src="/images/pool.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o7" value="Pool">
+                                        <label>Pool</label>
+                                    </div>
+                                
+                               
+                                    <div class="dv" id="cb8">
+                                        <img src="/images/hottub.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o8" value="Hot Tub">
+                                        <label>Hot Tub</label>
+                                    </div>
+                                
+                                
+                                    <div class="dv" id="cb9">
+                                        <img src="/images/exercise.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" name="chkboxs[]" id="o9" value="Exercise Equipment">
+                                        <label>Excercise Equipment</label>
+                                    </div>
+                                
+                            </div>
+                            <h2>Do you have any of these Safety items?</h2>
+                            <div class="a4">
+                              
+                                    <div class="dv"id="cb10">
+                                        <img src="/images/firstaid.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" id="o10" name="chkboxs[]" value="First Aid">
+                                        <label>First Aid</label>
+                                    </div>
+                                
+                                
+                                    <div class="dv" id="cb11">
+                                        <img src="/images/smalarm.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" id="o11" name="chkboxs[]" value="Smoke Alarm">
+                                        <label>Smoke Alarm</label>
+                                    </div>
+                             
+                                    <div class="dv"  id="cb12">
+                                        <img src="/images/fe.jpg" width="50px" height="50px" style="margin-top: 10px; margin-left: 30px;"><br>
+                                        <input type="checkbox" id="o12" name="chkboxs[]" value="Fire Extinguisher">
+                                        <label>Fire Extinguisher</label>
+                                    </div>
+                                
+                            </div>
+            </div>
+            <hr/>
+        <div>
+            <div><a href="/p5h"><input class="c1" type=button value='Back'></a></div>
+            <div><button type="submit" class="cc" onclick="return checkchk()" >Next</button></div>
+        </div>
+        </form>
+        <script>
+           const a= document.querySelector('#cb1'); 
+           const b= document.querySelector('#cb2'); 
+           const c= document.querySelector('#cb3'); 
+           const d= document.querySelector('#cb4'); 
+           const e= document.querySelector('#cb5'); 
+           const f= document.querySelector('#cb6'); 
+           const g= document.querySelector('#cb7'); 
+           const h= document.querySelector('#cb8'); 
+           const i= document.querySelector('#cb9');
+           const j= document.querySelector('#cb10');
+           const k= document.querySelector('#cb11');
+           const l= document.querySelector('#cb12');
+            var chkb1 = document.getElementById("o1");
+            var chkb2 = document.getElementById("o2");
+            var chkb3 = document.getElementById("o3");
+            var chkb4 = document.getElementById("o4");
+            var chkb5 = document.getElementById("o5");
+            var chkb6 = document.getElementById("o6");
+            var chkb7 = document.getElementById("o7");
+            var chkb8 = document.getElementById("o8");
+            var chkb9 = document.getElementById("o9");
+            var chkb10 = document.getElementById("o10");
+            var chkb11 = document.getElementById("o11");
+            var chkb12 = document.getElementById("o12");
+      chkb1.addEventListener("change", function() {
+        if (this.checked) {
+            a.classList.add("myDivChecked");
+        } 
+        else {
+            a.classList.remove("myDivChecked");
+        }   
+    });
+    chkb2.addEventListener("change", function() {
+        if (this.checked) {
+            b.classList.add("myDivChecked");
+        } 
+        else {
+            b.classList.remove("myDivChecked");
+        }   
+    });
+    chkb3.addEventListener("change", function() {
+        if (this.checked) {
+            c.classList.add("myDivChecked");
+        } 
+        else {
+            c.classList.remove("myDivChecked");
+        }   
+    });
+    chkb4.addEventListener("change", function() {
+        if (this.checked) {
+            d.classList.add("myDivChecked");
+        } 
+        else {
+            d.classList.remove("myDivChecked");
+        }   
+    });
+    chkb5.addEventListener("change", function() {
+        if (this.checked) {
+            e.classList.add("myDivChecked");
+        } 
+        else {
+            e.classList.remove("myDivChecked");
+        }   
+    });
+    chkb6.addEventListener("change", function() {
+        if (this.checked) {
+            f.classList.add("myDivChecked");
+        } 
+        else {
+            f.classList.remove("myDivChecked");
+        }   
+    });
+    chkb7.addEventListener("change", function() {
+        if (this.checked) {
+            g.classList.add("myDivChecked");
+        } 
+        else {
+            g.classList.remove("myDivChecked");
+        }   
+    });
+    chkb8.addEventListener("change", function() {
+        if (this.checked) {
+            h.classList.add("myDivChecked");
+        } 
+        else {
+            h.classList.remove("myDivChecked");
+        }   
+    });
+    chkb9.addEventListener("change", function() {
+        if (this.checked) {
+            i.classList.add("myDivChecked");
+        } 
+        else {
+            i.classList.remove("myDivChecked");
+        }   
+    });
+    chkb10.addEventListener("change", function() {
+        if (this.checked) {
+            j.classList.add("myDivChecked");
+        } 
+        else {
+            j.classList.remove("myDivChecked");
+        }   
+    });
+    chkb11.addEventListener("change", function() {
+        if (this.checked) {
+            k.classList.add("myDivChecked");
+        } 
+        else {
+            k.classList.remove("myDivChecked");
+        }   
+    });
+    chkb12.addEventListener("change", function() {
+        if (this.checked) {
+            l.classList.add("myDivChecked");
+        } 
+        else {
+            l.classList.remove("myDivChecked");
+        }   
+    });
+    function checkchk() {
+        var checkboxes = document.querySelectorAll('input[type=checkbox]');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                return true;
+            }
+        }
+        alert('Check at least one checkbox');
+        return false;
+    }
+
+            
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,44 @@
+<!-- this is for guest home page -->
+<!-- guest will enter the details of the place they want to visit -->
+<!-- contact us, about us aur faqs ka page bhi link krna hai -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomeAway- Home away from home</title>
+        <link rel="stylesheet" href="/css/guest-homepage.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+        crossorigin="anonymous">
+        <link rel="icon" href="../public/imgs/favicon_io/favicon.ico">
+    </head>
+    <body class="frame back-img">
+        <form name="guest-form" action="/" method="post" onsubmit="return formValidate()">
+            <div class="title">Welcome to HomeAway</div>
+            <p>help us find you a perfect stay!</p>
+            <div class="subtitle"></div>
+            <div class="input-container ic1">
+                <input id="destination" name="destination" class="input" type="text" placeholder="destination" >
+                <div class="cut"></div>
+                <label for="destination" class="placeholder">Destination</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="check-in" name="checkin" class="input" type="date" placeholder="check-in" >
+                <div class="cut"></div>
+                <label for="check-in" class="placeholder">check-in</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="check-out" name="checkout" class="input" type="date" placeholder="check-out" >
+                <div class="cut"></div>
+                <label for="check-out" class="placeholder">check-out</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="no_guests" name="no_guests" class="input" type="text" placeholder="number of guests" >
+                <div class="cut cut-short"></div>
+                <label for="no_guests" class="placeholder">Number of Guests</label>
+            </div>
+            <button type="submit" class="submit">Find me a Stay!</button>
+        </form>
+    </body>
+    <script src="/js/form.js"></script>
+    
+</html>

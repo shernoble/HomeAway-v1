@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/public/ContactUs.css" />
+    <link rel="icon" href="/public/favicon.ico">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <img src="/public/images/pexels-vinta-supply-co-_-nyc-842948.jpg" style="position: absolute;" height="100%" width="100%">
+    <p ></p>
+    
+    <div class="container">
+        <div class="contact-info">
+          <h1 class="title" style="font-size: 30px;">Let's get in touch</h1>
+          <p class="text">
+            
+          </p>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+
+          <form autocomplete="off">
+            <h1 class="title" style="font-size: 40px;">Contact us</h1>
+            <div class="input-container">
+              <input type="text" name="name" class="input" placeholder="Username" required>              
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" placeholder="Email" required>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" id= "phone" class="input" placeholder="Phone Number" required>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" placeholder="Message" required></textarea>
+            </div>
+            <input type="submit" onclick="funnxtpag()" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+          function funnxtpag()
+          {
+            var phoneno = document.getElementById('phone').value;
+            var exp = new RegExp(/^\d{10}$/);
+            if(!exp.test(phoneno))
+            {
+              alert("phone number should contain 10 digits");
+            }
+          }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+.main-block 
+{
+    flex-direction: row;
+    height: calc(100% - 50px);
+    background-color: rgb(240, 238, 237);
+    margin-bottom:15px;
+}
+.info 
+{
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    background-color: #E1EEDD;
+    border-color: black;
+   
+ }
+input 
+{
+    padding: 5px;
+   
+    background: transparent;
+    background-color: #E1EEDD;
+    border: none;
+    border-bottom: 1px solid black;
+}
+input::placeholder 
+{
+    color: black;
+}
+.main-block 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 238, 237);
+    padding: 25px;
+    background: white;
+        
+}
+
+.cc{
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: larger;
+    align-content: center;
+    border-radius:500px;
+    width:150px;
+    height:40px;
+    border:1px solid black;
+    position:relative;
+    margin-left:1350px;
+    background-color:black;
+    color:white;  
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Give description about place</title>
+	<link rel="stylesheet" type="text/css" href="/p8h.css">
+    <link rel="stylesheet" type="text/css" href="/all.css">
+    <link rel="stylesheet" type="text/css" href="/p4h.css">
+    <link rel="icon" href="/favicon.ico">
+    <script src="/js/p8h.js"></script>
+</head>
+<body>
+	<div class="navbar header">
+        <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+     </div>
+    <h1 style="margin-top: 130px;margin-left: 500px;font-size: 40px;	">Create your description</h1>
+	<p style="margin-top: 10px;margin-left: 500px;">Share what makes your place special.</p>
+    <form action="/p9h" method="post">
+	<textarea rows="10"  id="txtarr" name="txtarr" style="margin-top: 10px;margin-left: 500px; margin-bottom: 60px;" required>You'll have a great time at this place to stay comfortably.</textarea>
+    <hr />
+	<div>
+        <div><a href="/p8h"><input class="c1" type=button value='Back'></a></div>
+        <div><button class="cc" type="submit" onclick="return funnxtpag()">Next</button></div>
+    </div>
+    </form>
+    <script>
+        var txtarr = document.getElementById('txtarr');
+        function funnxtpag(){
+            if(txtarr.value.length<5){
+                alert("Give some description of atleast 5 characters");
+                return false;
+            }
+            return true;
+            
+            // else{
+            //     window.location.href="/p10h";
+            // }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.wp{
+    display:grid;
+    grid-template-columns: auto auto;
+    margin-top:50px;
+    margin-bottom: 30px;
+}
+.gs{
+    background-color: #557571;
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left:1350px;
+    font-size: larger;
+    align-content: center;
+    border:2px solid black;
+    border-radius:500px;
+    width:150px;
+    height:40px;
+    cursor: pointer;  
+}
+.s2{
+    margin-top: 70px;
+}

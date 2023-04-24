@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quantity1 {
+    display: block;
+    height: 290px;
+    width: 600px;
+    background-color: #F7F7F7;
+    border :2px solid #F1F1F1;
+}
+
+.Minus{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.Plus {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+input[type=text]{
+    height: 70px;
+    width: 340px;
+    border :2px solid #C5C5C5;
+    margin-top: 50px;
+}
+
+.minus_plus{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 50%;
+    border :2px solid #C5C5C5;
+    color: #000000;
+    padding-top: 5px;
+}
+
+.minus_plus:hover {
+  background: #575b71;
+  color: #fff;
+} 
+
+.Input{
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.quantity_input{
+    padding-left: 158px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.quantity2 {
+    height: 100px;
+    width: 500px;
+    background-color: #F7F7F7;
+    margin-top: 20px;
+    border :2px solid #F1F1F1;
+    margin-bottom: 40px;
+}
+
+.Header{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 14.75px;
+}
+
+.checkbox {
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+.cc{
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: larger;
+    align-content: center;
+    border-radius:500px;
+    width:150px;
+    height:40px;
+    border:2px solid black;
+    position:relative;
+    margin-left:1350px;
+    background-color:black;
+    color:white;  
+    cursor: pointer;
+}

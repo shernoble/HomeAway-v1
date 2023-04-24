@@ -1,0 +1,114 @@
+/* main imgs container ko border radius dal dena aur light grey border rakh dena */
+
+.header{
+    height: 100px;
+    background-color: #557571;
+    width: 100%;
+}
+.heading1{
+    margin-left: 10px;
+    font-family: 'Playfair Display', serif;
+    color: #F4F4F4;
+}
+.selected-house{
+    max-width: 1200px;
+    margin: 10px auto;
+    /* border: 1px solid black; */
+    /* sirf test ke liye, badme nikaldena */
+    height: 500px;
+    display: flex;
+    /* display: grid; */
+    flex-wrap: wrap;/*any of the children that we add should wrap down in the div*/
+    
+}   
+.image{
+    /* fill all the space possible within the container */
+    flex-grow: 1;
+    flex-basis: 0;/*when any text is written on the image the image should not expand*/
+    /* height: 100px; */
+    min-width: 33.3%;
+    border: 2px solid white;
+    height:200px;
+    background-size: cover;
+    background-position: center;
+
+}
+.image1{
+    flex-grow: 1;
+    min-width: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:1000px) {
+    .image,.image1{
+        min-width: 50%;
+    }
+}
+@media (max-width:800px) {
+    .image,.image1{
+        min-width: 100%;
+    }
+}
+.description1{
+    margin: 40px auto;
+    margin-left: 80px;
+}
+.description1>p{
+    color:lightslategrey;
+}
+.rooms{
+    color:black;
+    font-family: 'Quicksand', sans-serif;
+}
+span{
+    margin: 0px 5px;
+}
+.description{
+    /* border: 2px solid #F6F1F1; */
+    border-radius: 5px;
+    max-width: 1300px;
+    margin: 40px 40px 0px 80px;
+    height:200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    
+}
+.desc-content>p{
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.desc-content,.desc-pricing{
+    border: 2px solid #F6F1F1;
+    flex-basis: 0;/*text shouldnt alter box size*/
+    margin: 7px;
+    height: 200px;
+}
+.desc-content{
+    /* height: 500px; */
+}
+.desc-pricing{
+    height: 200px;
+}
+.footer{
+    background-color: #557571;
+    margin-bottom: 0px;
+    padding-bottom: 80px;
+    margin-top: 15px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+a{
+    color:inherit;
+    text-decoration: none !important;
+}
+input{
+    margin-bottom: 15px;
+}
+body#blur.active{
+    filter:blur(20px);
+}

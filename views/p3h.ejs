@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <head>
+        <title>Type of Place Guests Offered</title>
+        <link rel="stylesheet" href="/all.css">
+        <link rel="stylesheet" href="/p3h.css">
+        <link rel="icon" href="/favicon.ico">
+    </head>
+    <body>
+        <div class="navbar header">
+            <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+         </div>
+        <form action="/p3h" method="post">
+            <div class="bg-img">
+                        <h1 style="font-size: 45px;margin-top: 0px;padding:12px">What type of place guests can be offered</h1>
+                        <div class="wc">
+                            
+                                <div class="lc" id="bt1">
+                                    <img src="/images/er.png" width="100px" height="100px">
+                                   <div>
+                                        <input type="radio" name="btn" id="a1" value="Entire Place">
+                                        <label for="a1">Entire Place</label>
+                                    
+                                    </div>
+                                
+                                    <p>Guests have entire place for themselves to stay.</p>
+                                </div>
+                            
+                                <div class="cc" id="bt2">
+                                    <img src="/images/pr.png" width="100px" height="100px">
+                                    <div>
+                                    <input type="radio" id="a2" name="btn" value="Private Room">
+                                    <label for="a2">Private Room</label>
+                                </div>
+                                    <p>Guests sleep in a private room but some areas may be shared with others or with you.</p>
+                                </div>
+                            
+                                <div class="rc" id="bt3">
+                                    <img src="/images/sr.jpg" width="100px" height="100px">
+                                    <div>
+                                    <input type="radio" id="a3" name="btn" value="Shared room">
+                                    <label for="a3">Shared Room</label>
+                                </div>
+                                    <p>Guests sleep in a room or common area that may be shared with others.</p>
+                                </div>
+                            
+                        </div>
+                  
+            </div>
+            <hr/>
+        <div>
+            <div><a href="/p2h"><input class="c1" type=button value='Back'></a></div>
+            <div><button type="submit" class="cr" onclick="return checkRadio()">Next</button></div>
+        </div>
+    </form>
+        <script>
+            const a= document.querySelector('#bt1');
+            const b= document.querySelector('#bt2');
+            const c= document.querySelector('#bt3');
+            const nt= document.querySelector('.c2');
+            var chkb1 = document.getElementById("a1");
+            var chkb2 = document.getElementById("a2");
+            var chkb3 = document.getElementById("a3");
+            
+chkb1.addEventListener('click', function() {
+  a.style.backgroundColor = ' #557571';
+  b.style.backgroundColor = '';
+  c.style.backgroundColor = '';
+});
+
+chkb2.addEventListener('click', function() {
+  b.style.backgroundColor = ' #557571';
+  c.style.backgroundColor = '';
+  a.style.backgroundColor = '';
+});
+
+chkb3.addEventListener('click', function() {
+ c.style.backgroundColor = ' #557571';
+ a.style.backgroundColor = '';
+ b.style.backgroundColor = '';
+});
+function checkRadio() {
+    var radios = document.getElementsByName("btn");
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        return true;
+      }
+    }
+    alert("Please select an option.");
+    return false;
+  }
+ </script>
+</body>
+</html>

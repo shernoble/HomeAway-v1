@@ -1,0 +1,74 @@
+<!-- when guest clicks on a house to view it -->
+<!-- isme 4 5 imgs rhenge  -->
+<!-- pura description rhega -->
+<!-- click on photo should expand and open in new page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reserve Stay</title>
+        <link rel="stylesheet" href="/css/reservation.css">
+        <%- include ("../partials/header") -%>
+        <!-- take Listing as the element passed from app.js -->
+        <div class="description1">
+            <h3><%=Listing.Title%></h3>
+            <p><span class="rooms"><%=Listing.Bedrooms%> bedrooms, <%=Listing.Bathrooms%> bathrooms</span><span class="location"><%=Listing.Address.District%>,<%Listing.Address.State%>India</span></p>
+        </div>
+        <div class="house-imgs">
+            <section class="selected-house">
+                
+                <div class="image1" style="background-image: url(<%=Listing.img_url1%>);">
+
+                </div>
+                <div class="image1" style="background-image: url(<%=Listing.img_url2%>);">
+                    
+                </div>
+                <div class="image" style="background-image: url(<%=Listing.img_url3%>);">
+                    
+                </div>
+                <div class="image" style="background-image: url(<%=Listing.img_url4%>);">
+                    
+                </div>
+                <div class="image" style="background-image: url(<%=Listing.img_url5%>);">
+                    
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="description">
+            <form action="/reserveReq/<%=Listing.ListingID%>" method="post" class="form-group">
+                <div class="desc desc-pricing">
+                    <h3>Booking</h3>
+                    <input class="form-control" type="date" placeholder="check-in" name="checkin" id="checkin" required>
+                    <input class="form-control" type="date" placeholder="check-out" name="checkout" id="checkout" required>
+                    <!-- print number of nights and days -->
+                    
+                    <p>Cost Per Night : <%=Listing.CostPerN%></p>
+                    <button type="submit"  class="reserve-button btn btn-outline-dark">Reserve Stay</button>
+                    <a href="#" onclick="toggle()">Click me</a>
+                </div>
+            </form>
+            
+            <div class="desc desc-content">
+                <h4 class="address_title">Address:</h4>
+                <p><%=Listing.Address.Line1%></p>
+                <p><%=Listing.Address.Line2%>, <%=Listing.Address.District%>,<%=Listing.Address.Pincode%></p>
+                <h4>Here's a little about our place!</h4>
+                <p><%=Listing.Desc1%></p>
+                <p><%=Listing.Desc2%></p>
+                
+            </div>
+            <div class="desc desc_facilities">
+                
+            </div>
+        </div>
+        <!-- <script src="calc_days"></script> -->
+        <script>
+            function toggle(){
+                var blur=document.getElementsByTagName("html");
+                
+                blur.classList.toggle('active');
+            }
+        </script>
+
+<%-include("../partials/footer")-%>

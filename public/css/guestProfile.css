@@ -1,0 +1,10 @@
+a{
+    color: inherit;
+    text-decoration:none !important;
+}
+.inbox_img,.edit_img{
+    text-align: right;
+}
+body{
+    background-color: #D3E4CD;
+}

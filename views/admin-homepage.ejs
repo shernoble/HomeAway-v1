@@ -1,0 +1,83 @@
+<%- include("../partials/admin_header") -%>
+
+          <div class="listings_all">
+            <!-- all listings ordered alphabetically:can change order of listings -->
+            <!-- can remove listings -->
+            <!-- listing_id,img,hostname,location,phno -->
+            <!-- on click shows listing along with option to delete and check host profile-->
+            <div class="search-listings">
+
+              <div class="search-container">
+              <form action="/admin-search" method="post">
+                <input type="text" class="searchTerm" name="search_ch" id="search_ch" placeholder="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+
+              <div>
+                <!-- filter -->
+                <!--  -->
+              </div>
+            </div>
+            <%if (All_listings.length==0){%>
+              <div class="noresult">
+                <h3>No such listing(s) found.</h3>
+              </div>
+              <!-- button ahould take back to original admin-homepage -->
+              <form action="/admin-listings/" method="get">
+              <button class="btn-outline-primary" type="button">Go Back</button>
+              </form>
+            <%}%>
+            <%All_listings.forEach(function(element){%>
+
+              <div class="item">
+                <div class="img">
+                  <img class="house-img" src=<%=element.img_url1%> alt="house-img">
+                </div>
+                <div class="house-desc">
+          
+                  <h5 style="margin-bottom: 0;"><%=element.Title%></h5>
+                  <div class="listings-form">
+                    <form action="/admin/delete/listings" method="post">     
+                      <input type="hidden" name="listID" value=<%=element.ListingID%>></input>
+                      <span><button class="delete-button " data-bs-toggle="modal" data-bs-target="#modal1<%=element._id%>" type="button"><i class="fa-sharp fa-solid fa-trash" ></i></button></span>
+                                    <!-- Modal -->
+                                    <!-- aria:for helping users who use assitants in reading websites -->
+                                    <!-- &times: the multiplication symbol -->
+                                    <div class="modal fade" id="modal1<%=element._id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Admin Confirmation</h5>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                Are you sure you want to delete listing <b><%=element.ListingID%></b> ?
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Confirm</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form> 
+                              </div>
+                  <p style="margin-bottom: 0;">ListingID : <a href="/listing/<%=element.ListingID%>"><%=element.ListingID%></p></a>
+                  <p style="margin-bottom: 0;"><%=element.Address.District %></p>
+                  <p style="margin-bottom: 0;"><%=element.Address.State %></p>
+                  
+                </div>
+              </div>
+              
+            <%});%>
+          </div>   
+          
+          
+
+    </body>
+    
+    
+    <%-include("../partials/footer")-%>

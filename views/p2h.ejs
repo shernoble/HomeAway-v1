@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <head>
+        <title>Type of Home</title>
+        <link rel="stylesheet" href="/all.css">
+        <link rel="stylesheet" href="/p2h.css">
+        <link rel="icon" href="/favicon.ico">
+        
+    </head>
+    <body>
+        <div class="navbar header">
+            <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+         </div>
+    <form action="/p2h" method="post">
+            <div class="bg-img">
+                        <h1 style="font-size: 45px;margin-top: 0px;padding:12px">Which of these describe about your place</h1>
+                            <div class="c3">
+                                <div >
+                                    <img src="/images/img1.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    </br>
+                                    <input type="radio" id="op1" name="option" value="House">
+                                    <label for="op1" style="font-size: 22px;"> House</label><br>
+                                </div>
+                                <div>
+                                    <img src="/images/img2.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input  type="radio" id="op2" name="option" value="Flat">
+                                    <label for="op2" style="font-size: 22px;"> Flat</label><br>
+                                </div>
+                                <div>
+                                    <img src="/images/img3.png" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input  type="radio" id="op3" name="option" value="Cabin">
+                                    <label for="op3" style="font-size: 22px;"> Cabin</label><br>
+                                </div>
+                            </div>
+                            <div class="c4">
+                                <div >
+                                    <img src="/images/img4.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input type="radio" id="op4" name="option" value="Cave">
+                                    <label for="op4"style="font-size: 22px;"> Cave</label><br>
+                                </div>
+                                <div>
+                                    <img src="/images/img5.jpeg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input type="radio" id="op5" name="option" value="Container">
+                                    <label for="op5" style="font-size: 22px;"> Container</label><br>
+                                </div >
+                                <div >
+                                    <img src="/images/img6.jpeg" width="120px" height="120px" style="margin-top: 3px;"><br>
+                                    <input type="radio" id="op6" name="option" value="Boat">
+                                    <label for="op6" style="font-size: 22px;"> Boat</label><br>
+                                </div>
+                            </div>
+                            <div class="c5">
+                                <div>
+                                    <img src="/images/img7.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input type="radio" id="op7" name="option" value="Farm House">
+                                    <label for="op7" style="font-size: 22px;">Farm House</label><br>
+                                </div>
+                                <div>
+                                    <img src="/images/img8.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input type="radio" id="op8" name="option" value="Castle">
+                                    <label for="op8" style="font-size: 22px;"> Castle</label><br>
+                                </div>
+                                <div>
+                                    <img src="/images/img9.jpg" width="120px" height="120px" style="margin-top: 3px;">
+                                    <br>
+                                    <input type="radio" id="op9" name="option" value="Tree House">
+                                    <label for="op9" style="font-size: 22px;">Tree House</label><br>    
+                                </div>
+                            </div>
+                    
+            </div>
+            <hr/>
+        <div>
+            <div><a href="/p1h"><input class="c1" type=button value='Back'></a></div>
+            <div><button type="submit" class="c2" onclick="return checkRadio()">Next</button></div>
+        </div>
+    </form>
+    <script  src="/js/p2h.js"></script>
+    </body>
+    
+</html>

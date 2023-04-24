@@ -1,0 +1,52 @@
+<%- include("../partials/admin_header") -%>
+    <div class="search-container">
+        <form action="/admin-guestlist/search" method="post">
+            <input type="text" class="searchTerm" name="search_ch" id="search_ch" placeholder="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        </div>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            </thead>
+            <tbody>
+                <% guestList.forEach(function(element){ %>
+                <tr>
+                    <td ><%= element.UserName %></td>
+                    <td ><%=element.Email%></td>
+                    <form action="/admin/delete/guestlist" method="post">
+                        <input type="hidden" name="elementID" value=<%=element.UserID%>></input>
+                        <!-- The toggle tells Bootstrap what to do and the target tells Bootstrap which element is going to open -->
+                        <td><button class="delete-button " data-bs-toggle="modal" data-bs-target="#MyModal<%=element._id%>" type="button"><i class="fa-sharp fa-solid fa-trash" ></i></button></td>
+                        <!-- Modal -->
+                        <!-- aria:for helping users who use assitants in reading websites -->
+                        <!-- &times: the multiplication symbol -->
+                        
+                        <div class="modal fade" id="MyModal<%=element._id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Admin Confirmation</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    Are you sure you want to delete user <b><%=element.UserID%></b> ?
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </tr>
+                <%}) %>
+            </tbody>
+        </table>
+    </div>
+<%-include("../partials/footer")-%>

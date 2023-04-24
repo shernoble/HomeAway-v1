@@ -1,0 +1,52 @@
+<head>
+    <title>Basics about place</title>
+    <link rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="/p4h.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="navbar header">
+        <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+     </div>
+    <h3 style="margin-left: 450px; font-size: 45px; margin-bottom: 0px; height: 20px; margin-top: 30px;">Some Basics about your place</h3>
+    <br>
+    <br>
+    <p style="margin-left: 450px; font-size: 15px; margin-bottom: 0px;">You'll add more details such as no.of guests,beds..</p>
+    <br>
+    <br>
+    <form action="/p5h" method="post">
+    <div class="main-block" style="height: 400px; width: 500px; margin-top: 0px; margin-left: 400px; padding: 0px;" >
+        
+            <div class="info">
+                <p style="font-size: 20px; ">Guests</p>
+                <input id="guests" type="number" name="guests" min="0" required style="width:500px;height: 50px; border: 2px solid black; margin-bottom: 0px;">
+                <p style="font-size: 20px;">Beds</p>
+                <input  id="beds" type="number" name="beds"  min="0" required style="width:500px; height: 50px; border: 2px solid black;margin-bottom: 0px;">
+                <p style="font-size: 20px; ">Bathrooms</p>
+                <input id="bathroom" type="number" name="bathroom"  min="0" required style="width:500px;height: 50px; border: 2px solid black;margin-bottom: 0px;">
+                <p style="font-size: 20px;">Bedrooms</p>
+                <input id="bedroom" type="number" name="bedroom" min="0" required style="width:500px;height: 50px;border: 2px solid black;margin-bottom: 0px;">
+            </div>
+        
+    </div>
+    <br/>
+    <hr/>
+    <div>
+        <div><a href="/p4h"><input class="c1" type=button value='Back'></a></div>
+        <div><button class="cc" onclick="return funnxtpag()">Next</button></div>
+    </div>
+    </form>
+    <script>
+        var gst = document.getElementById('guests');
+        var bed = document.getElementById('beds');
+        var bthr = document.getElementById('bathroom');
+        var bedr = document.getElementById('bedroom');
+        function funnxtpag(){
+            if(gst.value=="" || bed.value=="" || bthr.value=="" || bedr.value==""){
+                alert("Please Enter all the details");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>

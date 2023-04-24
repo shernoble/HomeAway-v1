@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/p12h.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+   
+        <div class="header">
+            <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+                <form action="/prof" method="post">
+                <div ><button type="submit"class="profile"><img src="/images/profile.png" alt=""></button></div>
+            </form>
+     </div>
+    <h1 style="margin-top:50px;margin-left: 660px; margin-bottom: 70px;">Your Listings</h1>
+    <a  href="/p1h"><button class="c1">Create new listing</button></a>
+    <a href="/first"><i class="fa-solid fa-arrow-left button" id="prev"></i></a>
+    <div style="margin-right: 400px;margin-left: 220px; margin-bottom: 5px; font-size: 25px;">Not Reserved Listings:-</div>
+    <div class="b1">
+        <%houseinfo.forEach((house)=>{ %>
+            <div class="container" style="margin-left: 180px; margin-top: 20px;">
+                <img src="\<%= house.img_url1 %>" height="200px" width="250px" style="margin-left: 130px;margin-top: 50px;">
+                <img src="\<%= house.img_url2 %>" height="200px" width="250px" style="margin-left: 130px;margin-top: 50px;">
+                <img src="\<%= house.img_url3 %>" height="200px" width="250px" style="margin-left: 130px;margin-top: 50px;">
+                <img src="\<%= house.img_url4 %>" height="200px" width="250px" style="margin-left: 130px;margin-top: 50px;">
+                <img src="\<%= house.img_url5 %>" height="200px" width="250px" style="margin-left: 130px;margin-top: 50px;">
+                <p style="margin-left: 130px;">Short Title:- <%= house.Title %></p>
+                <p style="margin-left: 130px;">Type Of PLace:- <%= house.Desc1 %></p>
+                <p style="margin-left: 130px;">Type Of PLace:- <%= house.PropertyType %></p>
+                <p style="margin-left: 130px;">Type Of PLace:- <%= house.RoomType %></p>
+                <p style="margin-left: 130px;">Location:- <%= house.Address %></p>
+                <p style="margin-left: 130px;">No.of guests:- <%= house.MaxGuests %></p>
+                <p style="margin-left: 130px;">Cost per night:- <%= house.CostPerN %></p>
+                <p style="margin-left: 130px;">Amenities:- <%= house.Facilities %></p>
+    
+            </div>
+          <%})%>
+        
+       <div style="margin-left: 220px; margin-bottom: 5px; font-size: 25px;">Reserved Listings:-</div>
+        <!-- <div class="container1" style="margin-left: 170px;margin-top: 20px;">
+            <img src="/public/images/pexels-pixabay-259588.jpg"height="200px" width="250px"style="margin-left: 130px;margin-top: 50px;">
+            <p style="margin-left: 190px;">Short Title</p>
+            <p style="margin-left: 50px;">Type Of PLace:- </p>
+            <p style="margin-left: 50px;">Location:- </p>
+            <p style="margin-left: 50px;">Cost per night:- </p>
+        </div> -->
+    </div>
+    
+</body>
+</html>

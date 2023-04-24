@@ -1,0 +1,42 @@
+.wc {
+    display:grid;
+    grid-template-columns:  auto auto auto;
+    background-color: #E1EEDD;
+    padding: 50px;
+  }
+.lc,.rc,.cc{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    transform: scale(10px);
+    border:'2px solid black';
+    box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 1px solid black;
+  }
+#bt2{
+      margin-left: 200px;
+      margin-right: 200px;
+   }
+hr{
+  margin-top:100px;
+}
+.cr{
+  margin-top: 10px;
+  margin-bottom:10px;
+  font-size: larger;
+  align-content: center;
+  border-radius:500px;
+  width:150px;
+  height:40px;
+  border:1px solid black;
+  position:relative;
+  margin-left:1350px;
+  background-color:black;
+  color:white;  
+  cursor: pointer;
+}
+
+  
+

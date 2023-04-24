@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+        <link rel="stylesheet" href="/css/resultspage.css">
+        <%- include ("../partials/header") -%>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                    <!-- render guest profile page -->
+                    <a class="dropdown-item" href="/profile/guest">User Profile</a>
+                    <a class="dropdown-item" href="/logout">logout</i></a>
+                    <!-- redirect to login page -->
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="container">
+                    <form action="/guestpage/filter" method="post">
+                        <h5>Property Type</h5>
+                        <label>
+                            <input type="radio" name="choice" value="All" checked/>
+                            <span>All</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="Flat"/>
+                            <span>Apartment</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="Villa"/>
+                            <span>Villa</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="Private House"/>
+                            <span>Private House</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="Farm house"/>
+                            <span>Farm House</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="Cottage"/>
+                            <span>Cottage</span>
+                        </label>
+                        <button  class="btn btn-outline-dark fil_btn" type="submit">Apply Filters</button>
+
+                    </form>
+                    <!-- <a href="/guest-homepage" class="btn btn-outline-light btn2 text-dark" style="width: 175px;height: 40px;text-align: center;margin-right: 0px;">Go Back</a> -->
+                    <a href="guest-homepage" class="btn-a" style="padding-left: 5px;margin-right: 5px;"><input type="button" value="HOME" class="btn btn-outline-light btn2"></a>
+                </div>
+
+                <!-- change button type="submit" -->
+            <!-- </form> -->
+        </div>
+        
+        <div class="search-container">
+            <form action="/guestpage/search" method="post">
+                <input type="text" class="searchTerm" name="search_ch" id="search_ch" placeholder="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <!-- <a href="/guest-homepage"><button class="search_button btn btn-outline-primary">Go Back</button></a> -->
+        <div>
+            <!-- <a href="/guest-homepage" class="btn btn-outline-primary go_back">Go Back</a> -->
+            <button class="go_back button" onclick="openNav()">More Options</button>
+        </div>
+        
+        <section class="houses" id="main">
+            <%All_listings.forEach(function(element){%>
+                <a href="/guest-reservation/<%=element.ListingID%>">
+                    <div class="house">
+                        <div style="background-image: url(<%=element.img_url1%>);" class="house-img"></div>
+                        <p class="title"><%=element.Title.substring(0,30)+"..."%></p>
+                        <p class="description"><%=element.Bedrooms%> Bedroom(s), <%=element.Bathrooms%> Bathroom(s)</p>
+                        <p class="location"><%=element.Address.District%>, <%=element.Address.State%></p>
+                        <p class="pricep">Cost/Night:Rs.<%=element.CostPerN%></p>
+                    </div>
+                    </a>
+            <%});%>
+            
+        </section>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+                document.body.style.backdropFilter=blur(5);
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "80px";
+                document.body.style.backgroundColor = "white";
+            }
+            function openFilterNav(){
+            }
+            function click1(){
+                if(!sesh){
+                    document.getElementById("")
+                }
+            }
+
+        </script>
+<%-include("../partials/footer")-%>

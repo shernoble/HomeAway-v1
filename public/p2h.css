@@ -1,0 +1,25 @@
+.c3,.c4,.c5
+  {
+    margin:auto auto 80px auto;
+    width: 500px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    justify-content:space-around;
+  }
+  .c5{
+    margin-bottom: 100px;
+  }
+  button{
+    cursor:pointer;
+    margin-bottom: 5px;
+  }
+  button:hover{
+    border: 2px solid black;
+}
+
+input[type="radio"]:checked + label {
+  color: rgb(35, 123, 100);
+}

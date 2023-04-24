@@ -1,0 +1,77 @@
+body
+{
+    margin: 0px;
+    display: block;
+    height: 100%;
+    background-color: #E1EEDD;
+    overflow: hidden;
+}
+.logo
+{
+  margin-top: 0px;
+  background-color: rgb(151, 191, 180);
+  padding: 5px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+  
+  .container
+  {
+    width: 40%;
+    height: 400px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-5);
+    box-shadow: 0 10px 20px rgb(40, 40, 40);
+    margin: 20px;
+  }
+  .c1,.c2
+{
+    margin-top: 10px;
+    margin-bottom:10px;
+    background-color: black;
+    color:white;
+    font-size: larger;
+    align-content: center;
+    border: 2px solid black;
+    border-radius:500px;
+    width:150px;
+    height:40px;
+    cursor:pointer;
+    
+  }
+  .c1{
+    position:absolute;
+    margin-left:15px;
+  }
+  .c2{
+    position:relative;
+    margin-left:1350px;
+  }
+  hr {
+    margin-top: 15px;
+    border-top: 4px solid black;
+  }
+
+  .header{
+    height: 100px;
+    background-color: #557571;
+    width: 100%;
+}
+.heading1{
+    font-size: 40px;
+    padding-top: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: 'Playfair Display', serif;
+    color: #F4F4F4;
+}

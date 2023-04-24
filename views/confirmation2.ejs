@@ -1,0 +1,95 @@
+<!-- when guest wants to confirm a booking -->
+<!-- cancellation policy -->
+<!-- below only if logged in -->
+<!-- payment summary -->
+<!-- host contact details -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirmation Page</title>
+    
+        <link rel="stylesheet" href="/css/confirmation.css">
+        <link rel="stylesheet" href="/css/reservation.css">
+        <script>
+            var costperN = parseFloat(document.getElementById('CostPerN').value);  
+            var noN = parseFloat(document.getElementById('noN').value);  
+            var tax = costperN * 0.05;
+
+            function getTotalCost() {
+                let totalcost = (costperN * noN) + tax;
+                document.getElementsByClassName('totalcost').textContent = totalcost;
+            }
+        </script>
+        <%- include ("../partials/header") -%>
+        <div class="summary-1">
+            <div class="pic" style="background-image: url(<%=Listing.img_url1%>);"></div>
+            <div class="desc">
+                <div class="desc-pos">
+                    <h4><%=Listing.Title%></h4>
+                    <p><%=Listing.Bedrooms%> bedrooms, <%=Listing.Bathrooms%> bathrooms</p>
+                    <p><%=Listing.Address.Line1%>,</p>
+                    <p><%=Listing.Address.Line2%></p>
+                    <p><%=Listing.Address.District%>, <%=Listing.Address.Pincode%>, <%=Listing.Address.State%></p>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="ccl" style="height: 150px;">
+
+            <h5>Cancellation policy</h5>
+            <ul>
+                <li>To receive a full refund, guests must cancel at least 30 days before check-in</li>
+                <li>If guests cancel between 7 and 30 days before check-in, host gets paid 50% for all nights</li>
+                <li>If guests cancel less than 7 days before check-in, host gets paid 100% for all nights</li>
+                <li>Guests can also receive a full refund if they cancel within 48 hours of booking, if the cancellation occurs at least 14 days before check-in</li>
+            </ul> 
+        </div>
+        
+        <div class="payment"> 
+            <h5>Payment Summary</h5>
+            <table class="table1 table table-bordered" >
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="heading1">Details</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>number of nights</td>
+                        
+                        <td><%=num_days%></td>
+                    </tr>
+                    <tr>
+                        <td>cost per night</td>
+                        <td><%=Listing.CostPerN%></td>
+                    </tr>
+                    <tr>
+                        <td>taxes</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>total cost (rupees) </td>
+                        <%const part1=num_days*Listing.CostPerN%>
+                        <%const part2=part1*0.05%>
+                        <td><%=part1+part2%></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form action="/confirm-booking" method="post">
+            <!-- takes to congrats page -->
+            <!-- <button class="confirmation btn btn-outline-dark">confirm booking</button> -->
+            <a href="/congog" class="btn btn-outline-dark">confirm booking</a>
+        </form>
+        <form action="/guest-homepage" method="post">
+            <!-- take back to guest search page -->
+            <button type="submit" class="btn btn-outline-dark" name="go_back">Cancel</button>
+        </form>
+        
+        <script>
+            
+        </script>
+    <%-include("../partials/footer")-%>
+</html>

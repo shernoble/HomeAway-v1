@@ -1,0 +1,42 @@
+<%- include("../partials/admin_header") -%>
+    <!-- all guests sigup goes directly to guestlist -->
+    <!-- from guestlist pick up the ones where id is empty -->
+    <!-- render empty ids onto to verify lists -->
+
+        <div class="container">
+            <table class="table" style="max-width:1000px">
+                <thead class="thead-dark">
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                </thead>
+            <tbody>
+                <% list.forEach(function(element){ %>
+                    <td ><%= element.UserName %></td>
+                    <td ><%=element.Email%></td>
+                    <form action="/verify/user" method="post">
+                        <input type="hidden" name="elementID" value="<%=element.UserName%>"></input>
+                    <td><button data-bs-toggle="modal" data-bs-target="#modal1" type="button"><i class="fa-solid fa-badge-check"></i></button></td>
+                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Admin Confirmation</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                Create ID for <b><%=element.UserName%></b> 
+                                <input type="text" name="userid" id="userid">
+                                <input type="hidden">
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <% }); %>
+        </div>

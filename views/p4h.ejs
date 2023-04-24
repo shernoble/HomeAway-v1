@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Address</title>
+    <link rel="stylesheet" href="/p4h.css">
+    <link rel="stylesheet" href="/all.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="navbar header">
+        <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+     </div>
+    <h3 style="margin-left: 450px; font-size: 45px; margin-bottom: 0px; height: 20px; margin-top: 30px;">Enter your address</h3>
+    <br>
+    <br>
+    <p style="margin-left: 450px; font-size: 15px; margin-bottom: 30px;">Your address will be shared with guest after registration</p>
+    <br>
+    <br>
+<form action="/p4h" method="post" >
+    <div class="main-block" style="height: 400px; width: 500px; margin-top: 0px; margin-left: 400px; padding: 0px;" >
+        
+            <div class="info" style="height: 420px;">
+                <input type="text" id="street" name="street" style="width:500px;height: 50px;"placeholder="Street" required>
+                <input type="text" name="flat" id="flat" style="width:500px; height: 50px;" placeholder="Flat,Suite,etc." required>
+                <input type="text" name="city" id="city" style="width:500px;height: 50px;" placeholder="City" required>
+                <input type="text" name="state" id="state" style="width:500px;height: 50px;" placeholder="State" required>
+                <input type="text" name="code" id="code" style="width:500px;height: 50px;" placeholder="Pincode"  required>
+                <input type="text" name="country" id="country" style="width:500px; height: 50px;" placeholder="Country" value="India" readonly> 
+            </div>
+       
+        
+    </div>
+    <hr/>
+    <div>
+        <div><a href="/p3h"><input class="c1" type=button value='Back'></a></div>
+        <div><button class="cc" onclick="return funnxtpag()">Next</button></div>
+    </div>
+</form>
+    <script>
+        function funnxtpag()
+        {
+            var cd = document.getElementById('code').value;
+            var exp=new RegExp(/^\d{6}$/);
+            if(!exp.test(cd))
+            {
+                alert("pincode should consist 6 digits");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

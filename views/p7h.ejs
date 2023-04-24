@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Images</title>
+	<link rel="stylesheet" type="text/css" href="/p7h.css">
+   <link rel="stylesheet" type="text/css" href="/p7h1.css">
+   
+   <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+	<div class="navbar header">
+		<h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+	 </div>
+<h1 style="margin-top: 100px; margin-left: 580px">Add some photos of your place</h1>
+<p style="margin-top: 10px; margin-left: 530px">You'll need 5 photos to get started.</p>
+<form action="/p7h" method="post" enctype="multipart/form-data">
+    <div class="card" style="margin-top: 20px; margin-left: 460px; width:700px">
+    	<div class="top">
+    		<p>Drag & drop image uploading</p>
+    	</div>
+    	<div class="drag-area">
+    		<span class="visible">
+				Drag & drop image here or
+				<span class="select" role="button">Browse</span>
+			</span>
+			<span class="on-drop">Drop images here</span>
+    		<input name="images" type="file" accept="image/*" class="file" multiple />
+    	</div>
+    	<div class="container" style="height: 150px; margin-left: 0px; left:0px"></div>
+    </div>
+	<hr/>
+    <div>
+      <div><a href="/p6h"><input class="c1" type=button value='Back'></a></div>
+      <div><button class="c2" type="submit" onclick="return funnxtpag()">Next</button></div>
+  </div>
+  </form>
+    <script src="/js/p7h.js"></script>
+</body>
+</html>

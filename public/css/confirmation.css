@@ -1,0 +1,49 @@
+.summary-1{
+    border: 1px solid black;
+    max-width: 1300px;
+    margin: 40px 40px 20px 80px;
+    height:200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.ccl{
+    margin: 0px 40px 0px 80px;
+
+}
+.desc{
+    /* border: 1px solid black; */
+    flex-basis: 0;/*text shouldnt alter box size*/
+
+}
+.desc-pos{
+    margin-left: 20px;
+}
+.payment>h5{
+    margin-left: 80px;
+}
+.pic{
+    background-size: cover;
+    background-position: center;
+}
+.payment-summary{
+    border: 1px solid black;
+    max-width: 1300px;
+    margin: 40px auto;
+    height:200px;
+    display: grid;
+}
+.table1{
+    max-width: 1000px;
+    margin: 40px auto;
+    /* width: auto; */
+    
+}
+.table1 .heading1{
+    width: 70%;
+    color: black;
+}
+.ccl{
+    max-width: 1000px;
+    height: 200px;
+    
+}

@@ -1,0 +1,71 @@
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#myVideo {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    max-width: 100%;    
+    overflow: hidden;
+}
+
+.colm-form {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.colm-form .form-container {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.colm-form p {
+    font-size: 14px;
+}
+
+#admin{
+    width: 125px;
+    margin: 20px;
+    background-color: lightpink;
+    border: 0px;
+}
+
+#admin:hover{
+    background-color: rgb(169, 119, 127);
+}
+
+#guest{
+    width: 125px;
+    background-color: lightpink;
+    border: 0px;
+    border-color: #ffffff;
+}
+
+#guest:hover{
+    background-color: rgb(169, 119, 127);
+}
+
+#host{
+    width: 125px;
+    margin: 20px;
+    margin-bottom: 30px;
+    background-color: lightpink;
+    border: 0px;
+}
+
+#host:hover{
+    background-color: rgb(169, 119, 127);;
+}

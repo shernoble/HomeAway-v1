@@ -1,0 +1,109 @@
+body
+{
+    margin: 0px;
+    display: block;
+    height: 100%;
+    background-color: #E1EEDD;
+    
+}
+.container
+{
+  width: fit-content;
+  height: fit-content;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-5);
+  box-shadow: 0 10px 20px rgb(40, 40, 40);
+  
+}
+.container1
+{
+  width: 500px;
+  height: 450px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-5);
+  box-shadow: 0 10px 20px rgb(40, 40, 40);
+
+}
+.c1
+{
+    margin-top: 50px;
+    font-size: larger;
+    align-content: center;
+    border-radius:500px;
+    width:fit-content;
+    height:50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position:absolute;
+    top:90px;
+    left:1300px;
+    background-color:black;
+    color:white;
+    cursor: pointer;
+}
+.c2
+{
+    margin-top: 50px;
+    font-size: larger;
+    align-content: center;
+    border-radius:500px;
+    width:100px;
+    height:40px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position:absolute;
+    top:90px;
+    left:20px;
+    background-color:black;
+    color:white;
+    cursor: pointer;
+}
+.b1
+{
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+    row-gap: 150px;
+    padding: 10px;
+}
+
+  i.button {
+    position: absolute;
+    top: 18%;
+    left:3%;
+    transform: translateY(-50%);
+    height: 36px;
+    width: 36px;
+    background-color: #343f4f;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    z-index: 100;
+    cursor: pointer;
+}
+
+  .profile
+  {
+    background-color: #557571;
+    position:relative;
+    margin-left:1350px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header{
+    height: 100px;
+    background-color: #557571;
+    width: 100%;
+}
+.heading1{
+    font-size: 40px;
+    padding-top: 0px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: 'Playfair Display', serif;
+    color: #F4F4F4;
+    position: absolute;
+}

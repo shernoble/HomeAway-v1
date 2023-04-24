@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Give Short Title</title>
+	<link rel="stylesheet" type="text/css" href="/p8h.css">
+    <link rel="stylesheet" type="text/css" href="/all.css">
+    <link rel="stylesheet" type="text/css" href="/p4h.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+	<div class="navbar header">
+        <h2 style="text-decoration:none;"class="heading1">Home Away</h2>
+     </div>
+    <h1 style="margin-top: 140px;margin-left: 500px;font-size: 40px;">Now lets us tell about your place</h1>
+	<p style="margin-top: 10px;margin-left: 500px;">Short titles work best. Have fun with it you can always change it later.</p>
+    <form action="/p8h" method="post">
+	<textarea id="txtar" name="txtar" rows="10"  style="margin-top: 10px;margin-left: 500px; margin-bottom: 50px;" required></textarea>
+    <hr />
+	<div>
+        <div><a href="/p7h"><input class="c1" type=button value='Back'></a></div>
+        <div><button class="cc" onclick="return funnxtpag()">Next</button></div>
+    </div>
+   </form>
+    <script>
+        var txtar = document.getElementById('txtar');
+        function funnxtpag(){
+            if(txtar.value.length<2){
+                alert("Give some short title of atleast 2 characters");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
